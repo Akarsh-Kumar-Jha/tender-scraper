@@ -1,0 +1,31 @@
+{
+  "name": "tender",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.104.0",
+    "adm-zip": "^0.5.17",
+    "axios": "^1.15.1",
+    "cheerio": "^1.2.0",
+    "cloudinary": "^2.9.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
+    "fs": "^0.0.1-security",
+    "mongoose": "^9.4.1",
+    "node-cron": "^4.2.1",
+    "nodemon": "^3.1.14",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0"
+  }
+}
