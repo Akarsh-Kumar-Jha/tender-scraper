@@ -25,12 +25,12 @@ app.get('/', (req, res) => {
 
 app.get('/getTenders',getTenders);
 
-// 🔥 DB connect
+// DB connect
 connectDB();
 
 let isRunning = false;
 
-// 🔥 Timeout wrapper (VERY IMPORTANT)
+// Timeout wrapper
 const runWithTimeout = async (fn, timeoutMs = 5 * 60 * 1000) => {
   return Promise.race([
     fn(),
@@ -40,7 +40,7 @@ const runWithTimeout = async (fn, timeoutMs = 5 * 60 * 1000) => {
   ]);
 };
 
-// 🔥 MAIN JOB
+// MAIN JOB
 async function scraperJob() {
 
   if (isRunning) return console.log("⛔ Already running");
@@ -74,7 +74,7 @@ cron.schedule('*/10 * * * *', () => {
   scraperJob();
 });
 
-// 🔥 First run (safe delay)
+// First run
 setTimeout(() => {
   scraperJob();
 }, 5000);
